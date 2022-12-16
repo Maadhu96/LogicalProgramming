@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Json Data Fetchinh</title>
+  </head>
+  <body>
+    <script>
+      let input = {
+        students: [
+          {
+            Sname: "Sanjay",
+            Id: 123,
+            email:"madappagp96@gmail.com"
+          },
+          {
+            Sname: "SWaroop",
+            Id: 133,
+            email:"swaroop96@gmail.com"
+
+          },
+          {
+            Sname: "Anil",
+            Id: 113,
+            email:"kumarAnil@gmail.com"
+          },
+        ]
+      }
+
+      let op=input.students.map(function (val){
+        // return val.Sname
+        let data={
+          Sname:val.Sname,
+          email:val.email,
+          Id:val.Id
+        }
+        return data
+      })
+    console.log(op)
+    </script>
+  </body>
+</html>

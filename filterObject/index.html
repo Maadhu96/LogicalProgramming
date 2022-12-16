@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Object</title>
+</head>
+<body>
+  <script>
+    let input={
+      "students":[
+        {
+          "Id":3,
+          "name":"Sanjay",
+          "college":"SDM"
+        },
+        {
+          "Id":143,
+          "name":"Manoj",
+          "college":"GSSS"
+        }
+      ]
+    }
+
+    let val=input.students.filter((item)=>{
+      return item.Id>10? item:""
+    })
+    console.log(val)
+  </script>
+</body>
+</html>

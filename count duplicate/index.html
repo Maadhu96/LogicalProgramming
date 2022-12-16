@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count duplicate</title>
+  </head>
+  <body>
+    <script>
+      let array = ["jan", "feb", "feb", "march", "april", "jan", "sep", "sep"];
+
+      let countduplicate = array.reduce((obj, arr) => {
+        if (obj[arr] == undefined) {
+          obj[arr] = 1;
+          return obj;
+        } else {
+          obj[arr]++;
+          return obj;
+        }
+      }, {});
+      console.log(countduplicate);
+    </script>
+  </body>
+</html>

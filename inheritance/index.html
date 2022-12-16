@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>inheritance</title>
+</head>
+<body>
+  <script>
+    class Tractor{
+      constructor(model,name,HP){
+        this.model=model;
+        this.name=name;
+        this.HP=HP
+      }
+      start(){
+        console.log(`Name of the tractor is ${this.name} and the model is ${this.model} Horse power is ${this.HP}`)
+      }
+    }
+    
+    class Customer extends Tractor{
+          drives(){
+            console.log("4WD ")
+          }
+          start(){
+            super.start()
+            this.drives()
+          }
+    }
+    mahindra=new Customer("Mahindra","575DI PowerPlus",47)
+    mahindra.start()
+    </script>
+</body>
+</html>

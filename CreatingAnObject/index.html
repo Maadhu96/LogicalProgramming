@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating An Object</title>
+  </head>
+  <body>
+    <script>
+      // created using object constructor
+      let obj = new Object();
+      (obj.name = "Anil Kumar"), (obj.id = 123), (obj.company = "Google");
+
+      console.log(obj);
+
+      // =============================================
+      // created using object literal
+      let a = {
+        name: "Manoj",
+        age: 25,
+        Gender: "Male",
+        College: "CIT",
+        address: {
+          place: "Malavalli",
+          state: "Karnataka",
+        },
+        MarksScored: [78, 90, 56, 78, 85, 57],
+      };
+      console.log(a);
+
+      // ================================================
+      //  created using the function
+      function employee(name, id, department, designation) {
+        (this.name = name),
+          (this.id = id),
+          (this.department = department),
+          (this.designation = designation);
+      }
+      let details = new employee(
+        "Sanjay",
+        145,
+        "Development",
+        "Software Engineer"
+      );
+
+      console.log(details);
+      // =========================================================
+      //  created using the class constructor
+
+      class student {
+        constructor(name, rollno, college) {
+          this.name = name;
+          this.rollno = rollno;
+          this.college = college;
+        }
+      }
+      let std = new student("Swaroop", 123, "MIT");
+      console.log(std);
+
+      // ===============================================
+
+      // create using Object.create()
+
+      let data = Object.create({});
+      console.log(data);
+      data.name = "Mahendra";
+      data.phoneNo = 9973462364;
+      data.designation = "software Engineer";
+      console.log(data);
+    </script>
+  </body>
+</html>
